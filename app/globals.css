@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --page: #f5f4ed;
+  --surface: #faf9f5;
+  --surface-elevated: #ffffff;
+  --ink: #141413;
+  --ink-secondary: #5e5d59;
+  --ink-tertiary: #87867f;
+  --ring-color: #d1cfc5;
+  --input-bg: #ffffff;
+  --nav-bg: rgba(250, 249, 245, 0.85);
+  --chat-input-bg: #30302e;
+  --bubble-user: #c96442;
+  --bubble-user-ink: #faf9f5;
+  --bubble-assistant: #30302e;
+  --sidebar-bg: #faf9f5;
+}
+
+.dark {
+  --page: #141413;
+  --surface: #30302e;
+  --surface-elevated: #3d3d3a;
+  --ink: #faf9f5;
+  --ink-secondary: #b0aea5;
+  --ink-tertiary: #87867f;
+  --ring-color: #30302e;
+  --input-bg: #30302e;
+  --nav-bg: rgba(20, 20, 19, 0.88);
+  --chat-input-bg: #262624;
+  --bubble-user: #c96442;
+  --bubble-user-ink: #faf9f5;
+  --bubble-assistant: #30302e;
+  --sidebar-bg: #1c1c1a;
+}
+
+body {
+  @apply bg-page text-ink antialiased;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .shadow-depth {
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.05);
+  }
+
+  .dark .shadow-depth {
+    box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.35);
+  }
+
+  .ring-hairline {
+    box-shadow: 0px 0px 0px 1px var(--ring-color);
+  }
+}
+
+/* Focus: Focus Blue per DESIGN.md */
+:focus-visible {
+  @apply outline-none ring-2 ring-focus ring-offset-2 ring-offset-page;
+}
