@@ -1,8 +1,5 @@
-import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
-
-const GITHUB = "https://github.com/anthropics/anthropic-sdk-typescript";
 
 export function Navbar() {
   return (
@@ -28,15 +25,6 @@ export function Navbar() {
             Open chat
           </Link>
           <ThemeToggle />
-          <a
-            href={GITHUB}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-xl px-3 py-2 text-body-ui text-dark-warm transition-opacity hover:opacity-90 dark:text-coral"
-          >
-            <ExternalLink className="h-4 w-4" />
-            <span className="hidden sm:inline">GitHub</span>
-          </a>
         </nav>
       </div>
     </header>
